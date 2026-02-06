@@ -136,13 +136,19 @@ EMAIL_PORT = os.environ.get('EMAIL_PORT',587)
 EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', 'True') == 'True'
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD') 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = True
 
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
+
+ALLOWED_HOSTS = os.environ.get(
+    "ALLOWED_HOSTS",
+    "abiral-bhattarai.com.np,www.abiral-bhattarai.com.np,portfolio-3m7j.onrender.com"
+).split(",")
+
 
 CSRF_TRUSTED_ORIGINS = [
     "https://abiral-bhattarai.com.np",
     "https://www.abiral-bhattarai.com.np",
-    "https://portfolio-xyz.onrender.com",
+    "https://portfolio-3m7j.onrender.com",
 ]
