@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+{% extends 'myapp/base.html' %}
+{% block title_block %}
+Abiral | Portfolio
+{% endblock %}
+{% block child_block %}
+
+<!-- Hero Section -->
+<section class="hero-section" style="background: linear-gradient(135deg, rgba(13, 110, 253, 0.05) 0%, rgba(108, 117, 125, 0.05) 100%);">
+  <!-- Animated Airplanes -->
+  <div class="airplane-animation"><i class="bi bi-airplane-fill"></i></div>
+  <div class="airplane-animation"><i class="bi bi-airplane-fill"></i></div>
+  
+  <div class="hero-content container">
+    <div class="mb-3" style="opacity: 0.6; animation: fadeIn 1s ease-out;">
+      <i class="bi bi-airplane floating-icon" style="font-size: 2rem; margin: 0 0.5rem;"></i>
+      <i class="bi bi-gear-fill floating-icon" style="font-size: 2rem; margin: 0 0.5rem;"></i>
+      <i class="bi bi-cpu-fill floating-icon" style="font-size: 2rem; margin: 0 0.5rem;"></i>
+    </div>
+    <h1 class="hero-title">Hello, I'm <span class="text-primary">Abiral</span></h1>
+    <p class="hero-subtitle">AI Engineer • Building Intelligent Agents • Data-Driven Solutions</p>
+    <p style="opacity: 0.7; font-size: 1rem; margin-top: 1rem; animation: fadeIn 1s ease-out 0.3s backwards;">Building intelligent systems while exploring the world ✈️</p>
+    <div class="hero-cta">
+      <a href="{% url 'projects' %}" class="btn btn-primary btn-lg me-2"><i class="bi bi-rocket-takeoff me-2"></i>View My Work</a>
+      <a href="{% url 'contacts' %}" class="btn btn-outline-primary btn-lg"><i class="bi bi-chat-dots me-2"></i>Let's Connect</a>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="section bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7 mb-4 mb-lg-0">
+        <h2 class="section-title">About Me</h2>
+        <p class="lead mt-4">AI Engineer crafting intelligent systems that solve real-world problems.</p>
+        <p>I specialize in machine learning, deep learning, and building autonomous AI agents. My work focuses on transforming complex data into actionable insights and creating systems that learn and adapt.</p>
+        <p>When I'm not training models or debugging neural networks, you'll find me:</p>
+        <ul class="list-unstyled mt-3">
+          <li class="mb-2"><i class="bi bi-egg-fried text-primary me-2"></i><strong>Cooking</strong> – Experimenting with recipes from different cuisines</li>
+          <li class="mb-2"><i class="bi bi-airplane text-primary me-2"></i><strong>Aviation</strong> – Following aviation tech and aircraft innovations</li>
+          <li class="mb-2"><i class="bi bi-car-front-fill text-primary me-2"></i><strong>Cars</strong> – Keeping up with automotive engineering and design</li>
+        </ul>
+      </div>
+      <div class="col-lg-5 text-center">
+        <div class="p-4">
+          <div style="font-size: 6rem; opacity: 0.15; line-height: 1.2;">
+            <i class="bi bi-robot"></i>
+          </div>
+          <div class="mt-4" style="display: flex; justify-content: center; gap: 1.5rem; font-size: 2.5rem; opacity: 0.2;">
+            <i class="bi bi-egg-fried"></i>
+            <i class="bi bi-airplane-engines"></i>
+            <i class="bi bi-speedometer"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<!-- Skills Section -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Skills</h2>
+    
+    <div class="row mt-5 g-4">
+      <!-- Languages -->
+      <div class="col-md-4">
+        <h5 class="mb-3"><i class="bi bi-code-slash text-primary me-2"></i>Languages</h5>
+        <div>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">C</span>
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag">SQL</span>
+        </div>
+      </div>
+      
+      <!-- Frameworks & Tools -->
+      <div class="col-md-5">
+        <h5 class="mb-3"><i class="bi bi-tools text-primary me-2"></i>Frameworks & Tools</h5>
+        <div>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">NumPy</span>
+          <span class="skill-tag">Scikit-learn</span>
+          <span class="skill-tag">NLTK</span>
+          <span class="skill-tag">Spacy</span>
+          <span class="skill-tag">PyTorch</span>
+          <span class="skill-tag">MATLAB</span>
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">Django</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">LangChain</span>
+          <span class="skill-tag">Keras</span>
+          <span class="skill-tag">LLMs</span>
+          <span class="skill-tag">HuggingFace</span>
+        </div>
+      </div>
+      
+      <!-- Version Control -->
+      <div class="col-md-3">
+        <h5 class="mb-3"><i class="bi bi-git text-primary me-2"></i>Version Control</h5>
+        <div>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">GitHub</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What I Do Section -->
+<section class="section bg-light">
+  <div class="container">
+    <h2 class="section-title">What I Do</h2>
+    <div class="row mt-5 g-4">
+      <div class="col-md-4 col-lg">
+        <div class="card h-100 text-center p-3">
+          <div class="card-body">
+            <i class="bi bi-robot text-primary" style="font-size: 2rem;"></i>
+            <h6 class="card-title mt-3 mb-2">Machine Learning</h6>
+            <p class="card-text small">Building intelligent systems that learn from data.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg">
+        <div class="card h-100 text-center p-3">
+          <div class="card-body">
+            <i class="bi bi-diagram-3 text-primary" style="font-size: 2rem;"></i>
+            <h6 class="card-title mt-3 mb-2">Deep Learning</h6>
+            <p class="card-text small">Designing neural networks for complex AI tasks.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg">
+        <div class="card h-100 text-center p-3">
+          <div class="card-body">
+            <i class="bi bi-bar-chart-line text-primary" style="font-size: 2rem;"></i>
+            <h6 class="card-title mt-3 mb-2">Data Analysis</h6>
+            <p class="card-text small">Extracting insights through analysis and visualization.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg">
+        <div class="card h-100 text-center p-3">
+          <div class="card-body">
+            <i class="bi bi-server text-primary" style="font-size: 2rem;"></i>
+            <h6 class="card-title mt-3 mb-2">Backend Systems</h6>
+            <p class="card-text small">Scalable architectures and RESTful APIs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg">
+        <div class="card h-100 text-center p-3">
+          <div class="card-body">
+            <i class="bi bi-cpu text-primary" style="font-size: 2rem;"></i>
+            <h6 class="card-title mt-3 mb-2">AI Agents</h6>
+            <p class="card-text small">Autonomous agents that reason and take actions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section text-center" style="background: linear-gradient(135deg, rgba(13, 110, 253, 0.03) 0%, rgba(108, 117, 125, 0.03) 100%);">
+  <div class="container">
+    <h2 class="mb-4">Let's Build Something Amazing</h2>
+    <p class="lead mb-4">Got an AI project or just want to chat about tech, travel, or cars? <br>I'm always up for a conversation.</p>
+    <a href="{% url 'contacts' %}" class="btn btn-primary btn-lg"><i class="bi bi-send me-2"></i>Get In Touch</a>
+  </div>
+</section>
+
+<!-- Go to Top Button -->
+<button class="go-to-top" id="goToTop" title="Go to top">
+  <i class="bi bi-airplane-fill"></i>
+</button>
+
+<script>
+  // Go to top button functionality
+  const goToTopBtn = document.getElementById('goToTop');
+  
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+      goToTopBtn.classList.add('visible');
+    } else {
+      goToTopBtn.classList.remove('visible');
+    }
+  });
+  
+  goToTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+
+{% endblock %}

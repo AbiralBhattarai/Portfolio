@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% extends 'myapp/base.html' %}
+{% block title_block %}
+{{ blog.blog_title }} | Abiral
+{% endblock %}
+{% block child_block %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <!-- Back Button -->
+      <a href="{% url 'blog' %}" class="btn btn-outline-secondary mb-4">
+        <i class="bi bi-arrow-left me-2"></i>Back to Blog
+      </a>
+      
+      <!-- Article Card -->
+      <article class="card p-4 p-md-5">
+        <div class="card-body">
+          <!-- Header -->
+          <header class="mb-4">
+            <h1 class="card-title mb-3" style="font-weight: 400;">{{ blog.blog_title }}</h1>
+            <div class="d-flex align-items-center text-muted">
+              <i class="bi bi-person-circle me-2"></i>
+              <span class="me-4">{{ blog.author }}</span>
+              <i class="bi bi-calendar3 me-2"></i>
+              <span>{{ blog.date_published|date:"F d, Y" }}</span>
+            </div>
+          </header>
+          
+          <hr class="my-4">
+          
+          <!-- Content -->
+          <div class="blog-content" style="line-height: 1.8; font-size: 1.1rem;">
+            {{ blog.blog_content|linebreaks }}
+          </div>
+          
+          <hr class="my-4">
+          
+          <!-- Footer -->
+          <footer class="d-flex justify-content-between align-items-center">
+            <small class="text-muted">
+              <i class="bi bi-clock me-1"></i>Last edited: {{ blog.last_edited|date:"F d, Y" }}
+            </small>
+            <a href="{% url 'blog' %}" class="btn btn-primary">
+              More Articles <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </footer>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+{% endblock %}
